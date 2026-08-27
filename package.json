@@ -1,0 +1,27 @@
+{
+  "name": "mercury-api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "test": "tap --node-arg=--require=ts-node/register"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^7.10.0",
+    "@types/node": "^26.4.0",
+    "fastify": "^4.29.1",
+    "fastify-jwt": "^4.1.3",
+    "fastify-swagger": "^5.1.1",
+    "fastify-zod": "^1.4.0",
+    "zod": "^4.4.3",
+    "zod-to-json-schema": "^3.25.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3"
+  }
+}
