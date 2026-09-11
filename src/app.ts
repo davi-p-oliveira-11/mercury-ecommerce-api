@@ -10,6 +10,12 @@ import {
 
 export const server = Fastify();
 
+declare module "fastify" {
+  export interface FastifyInstance {
+    authenticate: any;
+  }
+}
+
 server.setValidatorCompiler(validatorCompiler);
 server.setSerializerCompiler(serializerCompiler);
 
