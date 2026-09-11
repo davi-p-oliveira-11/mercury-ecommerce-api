@@ -44,3 +44,4 @@ prisma/*.db-journal
 
 # Test artifacts
 .tap/
+/src/generated/prisma
