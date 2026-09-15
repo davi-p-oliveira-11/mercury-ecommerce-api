@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 const productInput = {
    title: z.string(),
-   price: z.string(),
+   price: z.number(),
    content: z.string().optional(),
 }
 

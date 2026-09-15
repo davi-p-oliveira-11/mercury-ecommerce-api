@@ -1,0 +1,27 @@
+import prisma from "../../utils/prisma.js";
+import type { CreateProductInput } from "./product.schema.js";
+
+export async function createProduct( data: CreateProductInput & {owmnerId: number}) {
+   return prisma.product.create({
+      data,
+   })
+}
+
+export function getProducts() {
+   return prisma.product.findMany({
+      select: {
+        content: true,
+        title: true,
+        price: true,
+        id: true,
+        createdAt: true,
+        updatedAt: true,
+        owner: {
+           select: {
+             name: true,
+             id: true,
+           }, 
+        },    
+      },
+   });   
+}
